@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Differential Equation Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Differential Equation Analyzer</h1>
+        <div class="input-section">
+            <input type="text" id="equation" placeholder="Enter differential equation (e.g., dy/dx + 2y = e^(3x))">
+            <button onclick="analyzeEquation()">Analyze</button>
+        </div>
+        <div class="note">
+            <p>Try the example: <code>dy/dx + 2y = e^(3x)</code> to see the solution to Problem 2</p>
+        </div>
+        <div class="output-container">
+            <div class="properties">
+                <h2>Equation Properties</h2>
+                <div id="order">Order: -</div>
+                <div id="degree">Degree: -</div>
+                <div id="linearity">Linearity: -</div>
+                <div id="homogeneity">Homogeneity: -</div>
+            </div>
+            <div class="graph-container">
+                <h2>Equation Visualization</h2>
+                <div id="graph"></div>
+            </div>
+        </div>
+        
+        <div class="ai-assistant-container">
+            <h2>AI Assistant</h2>
+            <div class="chat-container" id="chat-container">
+                <div class="chat-message ai-message">
+                    <div class="message-content">
+                        Hello! I'm your AI assistant for differential equations. I can help explain concepts, provide step-by-step solutions, and answer questions about differential equations. How can I assist you today?
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="user-input" placeholder="Ask a question about differential equations...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
